@@ -19,13 +19,11 @@ class Vehicule {
         $this->poids = $poids;
     }
 
-    
     public function __construct($couleur, $poids) {
         echo "Appel du constructeur.<br>";
         $this->couleur = $couleur;
 
         $this->poids = $poids;
-
     }
 
     public function rouler() {
