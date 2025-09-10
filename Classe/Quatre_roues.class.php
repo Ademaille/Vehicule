@@ -1,10 +1,7 @@
 <?php
 
-include("Vehicule.php");
-
 class Quatre_roues extends Vehicule {
-    private $nombre_porte = 3;
-
+    private $nombre_porte;
 
     public function getNombre_porte() {
         return $this->nombre_porte;

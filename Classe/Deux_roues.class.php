@@ -1,9 +1,7 @@
 <?php
 
-include("Vehicule.php");
-
 class Deux_roues extends Vehicule {
-    private $cylindree = 25;
+    private $cylindree;
 
 
     public function getCylindree() {
@@ -12,7 +10,6 @@ class Deux_roues extends Vehicule {
     public function setCylindree($cylindree) {
         $this->cylindree = $cylindree;
     }
-
 
     public function mettre_essence($nombre_litre) {
         $this->ajout_litre = $this->$nombre_litre;

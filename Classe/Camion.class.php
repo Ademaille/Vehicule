@@ -3,7 +3,7 @@
 include("Quatre_roues.php");
 
 class Camion extends Quatre_roues {
-    private $longueur = 6;
+    private $longueur;
 
     public function getLongueur() {
         return $this->longueur;
