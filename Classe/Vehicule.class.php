@@ -1,6 +1,6 @@
 <?php
 
-class Vehicule {
+    abstract class Vehicule {
     
     // Attributs
     private $couleur;
@@ -11,15 +11,8 @@ class Vehicule {
         $this->couleur = $couleur;
         $this->poids = $poids;
     }
-    public function rouler() {
-        echo "Le véhicule roule<br>";
-    }
 
-    public function ajouter_personne($poids_personne) {
-        $this->poids = $this->poids + $poids_personne;
-    }
-
-// Accesseurs
+    // Accesseurs
     public function getCouleur() {
         return $this->couleur;
     }
@@ -33,5 +26,28 @@ class Vehicule {
     public function setPoids($poids) {
         $this->poids = $poids;
     }
- 
+    
+    // Methodes
+    public function rouler(){
+
+    }
+
+    abstract public function ajouter_personne($poids_personne);
+
+    public static function afficher_attribut($Vehicule){
+        if(method_exists($Vehicule, "getPoids")) {
+            echo "<br><br>La moto pèse " . $Vehicule->getPoids() . " " . "kg";
+        }
+
+        if(method_exists($Vehicule, "getCouleur")) {
+            echo "<br>La moto est de couleur " . $Vehicule->getCouleur();
+        }
+
+        if(method_exists($Vehicule, "getCylindree")) {
+            echo "<br>La moto à une cylindrée de " . $Vehicule->getCylindree();
+        }
+
+        // if(isset($Vehicule->))
+    }
 }
+    

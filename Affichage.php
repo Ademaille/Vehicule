@@ -5,33 +5,42 @@ include("./Classe/Voiture.class.php");
 include("./Classe/Deux_roues.class.php");
 include("./Classe/Camion.class.php");
 
+// Instance
+// $vehicule1 = new Vehicule("noir", 1500);
+// $vehicule1->rouler();
+// $vehicule1->ajouter_personne(70);
+// echo "<br>Le nouveau poids du véhicule est : " . $vehicule1->getPoids();
 
-$vehicule1 = new Vehicule("noir", 1500);
-$vehicule1->rouler();
-$vehicule1->ajouter_personne(70);
-echo "Le nouveau poids du véhicule est : " . $vehicule1->getPoids();
+// $vehicule2 = new Vehicule("verte", 1400);
+// $vehicule2->ajouter_personne(130);
+// echo "<br><br>La couleur du véhicule est " . $vehicule2->getCouleur() . " " . "et pèse " .  $vehicule2->getPoids();
 
-$vehicule2 = new Vehicule("verte", 1400);
-$vehicule2->ajouter_personne(130);
-echo "<br>La couleur du véhicule est " . $vehicule2->getCouleur() . " " . "et pèse " .  $vehicule2->getPoids();
+$voiture = new Voiture("rouge", "");
+$voiture->ajouter_pneu_neige(2);
+echo "<br>La voiture est " . $voiture->getCouleur() . " " . "et elle a " . $voiture->getNombre_pneu_neige() . " " . "pneus neige";
 
-$vehicule3 = new Voiture("rouge", "");
-$vehicule3->ajouter_pneu_neige(4);
-echo "<br>La voiture est " . $vehicule3->getCouleur() . " " . "et elle a " . $vehicule3->getNombre_pneu_neige() . " " . "pneus neige";
+$moto = new Deux_roues("noir", 120);
+$moto->ajouter_personne(80);
+$moto->mettre_essence(20);
+echo "<br><br>Le deux roues est de couleur " . $moto->getCouleur() . " " . "pèse" . " " . $moto->getPoids() . " ". "kg";
 
-$vehicule4 = new Deux_roues("noir", 120);
-$vehicule4->ajouter_personne(80);
-$vehicule4->mettre_essence(20);
-echo "<br>Le deux roues est de couleur " . $vehicule4->getCouleur() . " " . "pèse" . " " . $vehicule4->getPoids() . " ". "kg";
-
-$vehicule5 = new Camion("bleu", 10000);
-$vehicule5->longueur_camion(10); 
-$vehicule5->ajout_porte(2);
-$vehicule5->ajouter_remorque(5);
-$vehicule5->ajouter_personne(80);
+$camion = new Camion("bleu", 10000);
+$camion->longueur_camion(10); 
+$camion->ajout_porte(2);
+$camion->ajouter_remorque(5);
+$camion->ajouter_personne(80);
 echo 
-"<br>Le camion est de couleur " . $vehicule5->getCouleur() . " " . "pèse" . " " . 
+"<br><br>Le camion est de couleur " . $camion->getCouleur() . " " . "pèse" . " " . $camion->getPoids() . " " . "kg, avec une longueur de" . " " . 
+$camion->getLongueur() . " " . "metres, avec" . " " . $camion->getNombre_porte() . " " . "portes";
 
-$vehicule5->getPoids() . " " . "kg, avec une longueur de" . " " . 
+$moto2 = new Deux_roues("rouge", 150);
+$moto2->ajouter_personne(70);
+$moto2->setCouleur("verte");
+$moto2->setCylindree(1000);
+Vehicule::afficher_attribut($moto2);
 
-$vehicule5->getLongueur() . " " . "metres, avec" . " " . $vehicule5->getNombre_porte() . " " . "portes";
+// $camion2 = new Camion("blanc", 6000);
+// $camion2->ajouter_personne(84);
+// $camion2->setCouleur("bleu");
+// $camion2->ajout_porte(2);
+// Vehicule::afficher_attribut($camion2);

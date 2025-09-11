@@ -1,17 +1,18 @@
 <?php
 
-include("Quatre_roues.php");
-
 class Camion extends Quatre_roues {
+    // Attributs
     private $longueur;
 
+    // Accesseurs
     public function getLongueur() {
         return $this->longueur;
     }
     public function setLongueur($longueur) {
         $this->longueur = $longueur;
     }
-    // Methodes
+    
+    // Méthodes
     public function longueur_camion($longueur) {
         $this->longueur = $longueur;
     }
