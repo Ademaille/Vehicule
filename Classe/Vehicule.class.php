@@ -11,6 +11,14 @@ class Vehicule {
         $this->couleur = $couleur;
         $this->poids = $poids;
     }
+    public function rouler() {
+        echo "Le véhicule roule<br>";
+    }
+
+    public function ajouter_personne($poids_personne) {
+        $this->poids = $this->poids + $poids_personne;
+    }
+
 // Accesseurs
     public function getCouleur() {
         return $this->couleur;
@@ -25,12 +33,5 @@ class Vehicule {
     public function setPoids($poids) {
         $this->poids = $poids;
     }
-
-    public function rouler() {
-        echo "Le véhicule roule<br>";
-    }
-
-    public function ajouter_personne($poids_personne) {
-        $this->poids = $this->poids + $poids_personne;
-    }
+ 
 }

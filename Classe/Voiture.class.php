@@ -1,9 +1,9 @@
 <?php
 
-include("Quatre_roues.php");
+include("Quatre_roues.class.php");
 
 class Voiture extends Quatre_roues {
-    private $nombre_pneu_neige = 4;
+    private $nombre_pneu_neige = 0;
 
 
     public function getNombre_pneu_neige() {
@@ -13,11 +13,11 @@ class Voiture extends Quatre_roues {
         $this->nombre_pneu_neige = $nombre_pneu_neige;
     }
 
-
     public function ajouter_pneu_neige($nombre) {
-        $this->ajout_neige = $this->$nombre;
+        $this->nombre_pneu_neige += $nombre;
     }
+
     public function enlever_pneu_neige($nombre) {
-        $this->enlever_neige = $this->$nombre;
+        $this->nombre_pneu_neige -= $nombre;
     }
 }

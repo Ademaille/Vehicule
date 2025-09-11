@@ -11,9 +11,11 @@ class Camion extends Quatre_roues {
     public function setLongueur($longueur) {
         $this->longueur = $longueur;
     }
-
-
+    // Methodes
+    public function longueur_camion($longueur) {
+        $this->longueur = $longueur;
+    }
     public function ajouter_remorque($longueur_remorque) {
-        $this->longueur = $this->$longueur_remorque;
+        $this->longueur2 = $longueur_remorque;
     }
 }

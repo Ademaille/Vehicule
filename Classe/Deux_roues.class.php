@@ -12,6 +12,6 @@ class Deux_roues extends Vehicule {
     }
 
     public function mettre_essence($nombre_litre) {
-        $this->ajout_litre = $this->$nombre_litre;
+        $this->ajout_litre = $nombre_litre;
     }
 }
