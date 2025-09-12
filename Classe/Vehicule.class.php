@@ -36,18 +36,20 @@
 
     public static function afficher_attribut($Vehicule){
         if(method_exists($Vehicule, "getPoids")) {
-            echo "<br><br>La moto pèse " . $Vehicule->getPoids() . " " . "kg";
+            echo "<br><br>Le véhicule pèse " . $Vehicule->getPoids() . " " . "kg";
         }
 
         if(method_exists($Vehicule, "getCouleur")) {
-            echo "<br>La moto est de couleur " . $Vehicule->getCouleur();
+            echo "<br>Le véhicule est de couleur " . $Vehicule->getCouleur();
         }
 
         if(method_exists($Vehicule, "getCylindree")) {
-            echo "<br>La moto à une cylindrée de " . $Vehicule->getCylindree();
+            echo "<br>Le véhicule à une cylindrée de " . $Vehicule->getCylindree();
         }
 
-        // if(isset($Vehicule->))
+        if(method_exists($Vehicule, "getNombre_porte")) {
+            echo "<br>Le camion à " . $Vehicule->getNombre_porte() . " " . "portes";
+        }
     }
 }
     

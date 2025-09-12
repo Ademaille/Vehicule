@@ -6,6 +6,12 @@
     private $couleur;
     private $poids;
 
+    // public function __construct($couleur, $poids, $nombre_porte) {
+    //     $this->couleur = $couleur;
+    //     $this->poids = $poids;
+    //     $this->nombre_porte = $nombre_porte;
+    // }
+
     // Accesseurs
     public function getNombre_porte() {
         return $this->nombre_porte;

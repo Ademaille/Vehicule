@@ -22,7 +22,7 @@ echo "<br>La voiture est " . $voiture->getCouleur() . " " . "et elle a " . $voit
 $moto = new Deux_roues("noir", 120);
 $moto->ajouter_personne(80);
 $moto->mettre_essence(20);
-echo "<br><br>Le deux roues est de couleur " . $moto->getCouleur() . " " . "pèse" . " " . $moto->getPoids() . " ". "kg";
+echo "<br>Le deux roues est de couleur " . $moto->getCouleur() . " " . "pèse" . " " . $moto->getPoids() . " ". "kg";
 
 $camion = new Camion("bleu", 10000);
 $camion->longueur_camion(10); 
@@ -30,7 +30,7 @@ $camion->ajout_porte(2);
 $camion->ajouter_remorque(5);
 $camion->ajouter_personne(80);
 echo 
-"<br><br>Le camion est de couleur " . $camion->getCouleur() . " " . "pèse" . " " . $camion->getPoids() . " " . "kg, avec une longueur de" . " " . 
+"<br>Le camion est de couleur " . $camion->getCouleur() . " " . "pèse" . " " . $camion->getPoids() . " " . "kg, avec une longueur de" . " " . 
 $camion->getLongueur() . " " . "metres, avec" . " " . $camion->getNombre_porte() . " " . "portes";
 
 $moto2 = new Deux_roues("rouge", 150);
@@ -39,8 +39,8 @@ $moto2->setCouleur("verte");
 $moto2->setCylindree(1000);
 Vehicule::afficher_attribut($moto2);
 
-// $camion2 = new Camion("blanc", 6000);
-// $camion2->ajouter_personne(84);
-// $camion2->setCouleur("bleu");
-// $camion2->ajout_porte(2);
-// Vehicule::afficher_attribut($camion2);
+$camion2 = new Camion("blanc", 6000);
+$camion2->ajouter_personne(84);
+$camion2->setCouleur("bleu");
+$camion2->ajout_porte(2);
+Vehicule::afficher_attribut($camion2);
