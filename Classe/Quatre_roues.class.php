@@ -3,14 +3,12 @@
     class Quatre_roues extends Vehicule {
     // Les Attributs
     private $nombre_porte;
-    private $couleur;
-    private $poids;
 
-    // public function __construct($couleur, $poids, $nombre_porte) {
-    //     $this->couleur = $couleur;
-    //     $this->poids = $poids;
-    //     $this->nombre_porte = $nombre_porte;
-    // }
+    public function __construct($couleur, $poids, $nombre_porte) {
+        $this->setCouleur($couleur);
+        $this->setPoids($poids);
+        $this->nombre_porte = $nombre_porte;
+    }
 
     // Accesseurs
     public function getNombre_porte() {
@@ -30,6 +28,6 @@
     }
 
     public function ajouter_personne($poids_personne) {
-        $this->poids = $this->poids + $poids_personne;
+        $this->setPoids($this->getPoids() + $poids_personne);
     }
 }

@@ -1,10 +1,6 @@
 <?php
 
-include("Quatre_roues.class.php");
-
-// abstract class Quatre_roues {
-//     abstract public function ajouter_personne($poids_personne);    
-// }
+include_once("Quatre_roues.class.php");
 
 
 class Voiture extends Quatre_roues {
@@ -30,7 +26,7 @@ class Voiture extends Quatre_roues {
         $this->nombre_pneu_neige -= $nombre;
     }
 
-    // public function ajouter_personne($poids_personne) {
+    public function ajouter_personne($poids_personne) {
 
-    // }
+    }
 }

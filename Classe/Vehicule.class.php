@@ -48,7 +48,7 @@
         }
 
         if(method_exists($Vehicule, "getNombre_porte")) {
-            echo "<br>Le camion à " . $Vehicule->getNombre_porte() . " " . "portes";
+            echo "<br>Le véhicule à " . $Vehicule->getNombre_porte() . " " . "portes";
         }
     }
 }
