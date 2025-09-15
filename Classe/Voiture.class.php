@@ -1,13 +1,10 @@
 <?php
-
-include_once("Quatre_roues.class.php");
-
+include_once("./Classe/Quatre_roues.class.php");
 
 class Voiture extends Quatre_roues {
 
     // Attribut
     private $nombre_pneu_neige = 0;
-
 
     // Accesseurs
     public function getNombre_pneu_neige() {
@@ -27,6 +24,10 @@ class Voiture extends Quatre_roues {
     }
 
     public function ajouter_personne($poids_personne) {
-
+        
+        parent::ajouter_personne($poids_personne);
+        if($this->getPoids() >= 1500 && $this->nombre_pneu_neige <= 2) {
+            echo "<br>Attention, veuillez mettre 4 pneus neige.";
+        }
     }
 }

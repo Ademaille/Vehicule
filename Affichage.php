@@ -1,6 +1,5 @@
 <?php
 
-
 include("./Classe/Vehicule.class.php");
 include("./Classe/Voiture.class.php");
 include("./Classe/Deux_roues.class.php");
@@ -31,7 +30,7 @@ $camion->ajout_porte(2);
 $camion->ajouter_remorque(5);
 $camion->ajouter_personne(80);
 echo 
-"<br>Le camion est de couleur " . $camion->getCouleur() . " " . "pèse" . " " . $camion->getPoids() . " " . "kg, <br>avec une longueur de" . " " . 
+"Le camion est de couleur " . $camion->getCouleur() . " " . "pèse" . " " . $camion->getPoids() . " " . "kg, <br>avec une longueur de" . " " . 
 $camion->getLongueur() . " " . "metres, avec" . " " . $camion->getNombre_porte() . " " . "portes";
 
 $moto2 = new Deux_roues("rouge", 150);
@@ -46,7 +45,10 @@ $camion2->setCouleur("bleu");
 $camion2->ajout_porte(2);
 Vehicule::afficher_attribut($camion2);
 
-// $QuatreRoue = new Quatre_roues("bleu", 2000, 3);
-// if ($poids >= 1500 && $nombre_pneu_neige <= 2) {
-//         return "<br>Attention, veuillez mettre 4 pneus neige.";
-// }
+$voiture = new voiture("verte", 2100, 4);
+$voiture->ajouter_pneu_neige(2);
+$voiture->ajouter_personne(80);
+$voiture->setCouleur("bleu");
+$voiture->enlever_pneu_neige(4);
+$voiture->repeindre("noire");
+Vehicule::afficher_attribut($voiture);

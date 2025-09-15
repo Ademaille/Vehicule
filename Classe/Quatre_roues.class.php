@@ -24,7 +24,7 @@
     }
 
     public function repeindre($couleur) {
-        $this->ajout_peint = $this->$couleur;
+        $this->ajout_peint = $couleur;
     }
 
     public function ajouter_personne($poids_personne) {
